@@ -1,0 +1,3 @@
+# Cloudflare Pages (ignored by GitHub Pages, which uses s/index.html instead)
+/s  /?src=sample  302
+/s/ /?src=sample  302

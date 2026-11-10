@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reserve a full-size jar | Corrimar tallow balm (INTERNAL DRAFT)</title>
+  <meta name="description" content="Corrimar tallow balm: beef tallow refined four times, with a little frankincense. Reserve a full&#8209;size jar from Batch 01. Free to reserve, no payment today.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#171614">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/avif" imagesrcset="assets/hero-640.avif 640w, assets/hero-960.avif 960w, assets/hero-1122.avif 1122w" imagesizes="(min-width: 900px) 40vw, 90vw">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Before first paint: motion flag, sample greeting (?src=sample only), internal staging view (?internal=1).
+    (function () {
+      var d = document.documentElement; d.classList.add('js');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+      try {
+        var m = /[?&]src=([^&#]*)/.exec(location.search);
+        var s = m ? decodeURIComponent(m[1]).toLowerCase() : (sessionStorage.getItem('corrimar.v2.src') || '');
+        if (s === 'sample') d.classList.add('from-sample');
+        if (/[?&]internal=1/.test(location.search)) d.classList.add('internal');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!--
+    INTERNAL PLACEHOLDERS (not shown to customers; visible with ?internal=1):
+    - Full-size jar size: PLACEHOLDER
+    - Price: PLACEHOLDER for customers; proposed Batch 01 prices ($32, or $58 for two) are in the internal-only sizes block (?internal=1) and are not approved
+    - Full ingredient list: PLACEHOLDER (from the final label)
+    - Batch target: 100 is a PLACEHOLDER (config.js TARGET)
+    - Ship time, cancel/refund, privacy: PLACEHOLDER (policies.html)
+    - Consent wording (email + text): PLACEHOLDER, needs attorney review
+    - Maker slot ("who makes this", town, when Batch 01 is made): Cesar decides; leave empty until then
+    - Live count: hidden (config.js SHOW_LIVE_COUNT=false) until a shared backend exists
+  -->
+  <a class="skip" href="#reserve">Skip to the reserve form</a>
+
+  <aside class="draft" aria-label="Draft notice">
+    <p><strong>Internal draft, not live.</strong> Entries stay in this browser. The Corrimar name awaits an attorney trademark check (a similar Class 10 mark). Add ?internal=1 to see placeholders.</p>
+  </aside>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top">Corrimar</a>
+    <nav class="bar__nav" aria-label="Page">
+      <a href="#feel">How it feels</a>
+      <a href="#inside">What's in it</a>
+      <a href="#how">How it works</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <a class="bar__action" href="#reserve">Reserve</a>
+  </header>
+
+  <main id="top">
+    <!-- 1. HERO: wordmark (bar), headline, one line, button, reassurance, then the photo -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 id="hero-title" class="display hero__title">
+          <span class="when-sample"><span class="line"><span>You just tried</span></span><span class="line"><span>Corrimar.</span></span></span>
+          <span class="when-direct"><span class="line"><span>Corrimar</span></span><span class="line"><span>tallow balm.</span></span></span>
+        </h1>
+        <p class="hero__sub"><span class="when-sample">Liked your sample? Reserve a full&#8209;size jar from Batch 01.</span><span class="when-direct">Beef tallow, refined four times, with a little frankincense. Reserve a full&#8209;size jar from Batch 01.</span></p>
+        <a class="btn" href="#reserve" data-cta>Reserve my full-size jar</a>
+        <p class="hero__note">Free to reserve. No payment today.</p>
+        <p class="hero__batch" data-batch-line>Batch 01 · Reservations open</p>
+        <p class="hero__count" data-live-count hidden aria-live="polite"><span class="mini-bar" aria-hidden="true"><span data-bar></span></span><span><span data-reserved>0</span> of <span data-target>100</span> reserved</span></p>
+      </div>
+      <figure class="hero__pic" data-hero-pic>
+        <div class="hero__frame">
+          <picture>
+            <source type="image/avif" srcset="assets/hero-640.avif 640w, assets/hero-960.avif 960w, assets/hero-1122.avif 1122w" sizes="(min-width: 900px) 40vw, 90vw">
+            <source type="image/webp" srcset="assets/hero-640.webp 640w, assets/hero-960.webp 960w, assets/hero-1122.webp 1122w" sizes="(min-width: 900px) 40vw, 90vw">
+            <img src="assets/hero-960.jpg" srcset="assets/hero-640.jpg 640w, assets/hero-960.jpg 960w, assets/hero-1122.jpg 1122w" sizes="(min-width: 900px) 40vw, 90vw" width="1122" height="1402" alt="An open black jar of ivory Corrimar balm on stone, its lid leaning against the side." fetchpriority="high" decoding="async" data-drift>
+          </picture>
+        </div>
+        <figcaption class="img-note">Product images are illustrations; final photos coming soon.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 2. EXPERIENCE (ivory) -->
+    <section class="feel" id="feel" aria-labelledby="feel-title">
+      <figure class="feel__pic" data-reveal data-clip>
+        <picture>
+          <source type="image/avif" srcset="assets/texture-640.avif 640w, assets/texture-1254.avif 1254w" sizes="(min-width: 900px) 440px, 100vw">
+          <source type="image/webp" srcset="assets/texture-640.webp 640w, assets/texture-1254.webp 1254w" sizes="(min-width: 900px) 440px, 100vw">
+          <img src="assets/texture-640.jpg" srcset="assets/texture-640.jpg 640w, assets/texture-1254.jpg 1254w" sizes="(min-width: 900px) 440px, 100vw" width="1254" height="1254" alt="Close view of the smooth ivory balm in an open black jar, seen from above." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="feel__copy">
+        <h2 id="feel-title" class="head" data-reveal>How it feels</h2>
+        <p class="feel__lead" data-reveal>Firm in the jar. It softens with the warmth of your hands.</p>
+        <p data-reveal>Warm a small amount between your fingertips, then smooth it on. A little goes a long way.</p>
+      </div>
+    </section>
+
+    <!-- 3. PRODUCT (dark, photo on a stone mat) -->
+    <section class="inside" id="inside" aria-labelledby="inside-title">
+      <div class="inside__copy">
+        <h2 id="inside-title" class="head" data-reveal>What's in it</h2>
+        <ul class="inside__list" role="list" data-reveal>
+          <li><strong>Beef tallow</strong>, refined four times until it is pale and soft.</li>
+          <li><strong>Frankincense oil</strong>, a little, for a quiet scent.</li>
+        </ul>
+        <!-- INTERNAL ONLY: placeholder rows. Shown with ?internal=1, never in customer view. -->
+        <dl class="specs internal-only" aria-label="Internal placeholders">
+          <div><dt>Full-size jar</dt><dd><span class="ph">PLACEHOLDER</span> size not set</dd></div>
+          <div><dt>Price</dt><dd><span class="ph">PLACEHOLDER</span> set before the batch ships</dd></div>
+          <div><dt>Full ingredient list</dt><dd><span class="ph">PLACEHOLDER</span> from the final label</dd></div>
+          <div><dt>Batch target</dt><dd><span class="ph">PLACEHOLDER</span> 100 in config.js</dd></div>
+        </dl>
+      </div>
+      <figure class="inside__pic mat" data-reveal>
+        <picture>
+          <source type="image/avif" srcset="assets/ingredients-640.avif 640w, assets/ingredients-960.avif 960w, assets/ingredients-1254.avif 1254w" sizes="(min-width: 900px) 520px, 90vw">
+          <source type="image/webp" srcset="assets/ingredients-640.webp 640w, assets/ingredients-960.webp 960w, assets/ingredients-1254.webp 1254w" sizes="(min-width: 900px) 520px, 90vw">
+          <img src="assets/ingredients-640.jpg" srcset="assets/ingredients-640.jpg 640w, assets/ingredients-960.jpg 960w, assets/ingredients-1254.jpg 1254w" sizes="(min-width: 900px) 520px, 90vw" width="1254" height="1254" alt="An open jar of ivory balm on stone, with frankincense resin, a small dish of tallow, and a wooden spatula." loading="lazy" decoding="async">
+        </picture>
+      </figure>
+    </section>
+
+    <!-- 4. PROCESS (stone) -->
+    <section class="how" id="how" aria-labelledby="how-title">
+      <div class="how__head">
+        <h2 id="how-title" class="head" data-reveal>How the batch works</h2>
+        <figure class="how__pic" data-reveal>
+          <picture>
+            <source type="image/avif" srcset="assets/lifestyle-640.avif 640w, assets/lifestyle-960.avif 960w, assets/lifestyle-1122.avif 1122w" sizes="(min-width: 900px) 400px, 100vw">
+            <source type="image/webp" srcset="assets/lifestyle-640.webp 640w, assets/lifestyle-960.webp 960w, assets/lifestyle-1122.webp 1122w" sizes="(min-width: 900px) 400px, 100vw">
+            <img src="assets/lifestyle-640.jpg" srcset="assets/lifestyle-640.jpg 640w, assets/lifestyle-960.jpg 960w, assets/lifestyle-1122.jpg 1122w" sizes="(min-width: 900px) 400px, 100vw" width="1122" height="1402" alt="An open black jar of ivory balm on a stone windowsill, beside a folded linen cloth and a small plant." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+      <ol class="how__steps" data-steps>
+        <li class="how__step" data-reveal style="--i:0"><h3>Reserve free</h3><p>Pick 1 to 3 jars. No card and no payment today.</p></li>
+        <li class="how__step" data-reveal style="--i:1"><h3>We make the batch</h3><p>Your jars are held in Batch 01.</p></li>
+        <li class="how__step" data-reveal style="--i:2"><h3>We email first</h3><p>Before the batch ships, we email you the details and how to pay.</p></li>
+      </ol>
+    </section>
+
+    <!-- 5. SCALE (stone): sample vs full-size. Proposed prices only in the internal view. -->
+    <section class="scale" aria-labelledby="scale-cap">
+      <div class="scale__inner">
+        <figure class="scale__pic" data-reveal>
+          <picture>
+            <source type="image/avif" srcset="assets/scale-640.avif 640w, assets/scale-960.avif 960w, assets/scale-1122.avif 1122w" sizes="(min-width: 900px) 36vw, 90vw">
+            <source type="image/webp" srcset="assets/scale-640.webp 640w, assets/scale-960.webp 960w, assets/scale-1122.webp 1122w" sizes="(min-width: 900px) 36vw, 90vw">
+            <img src="assets/scale-640.jpg" srcset="assets/scale-640.jpg 640w, assets/scale-960.jpg 960w, assets/scale-1122.jpg 1122w" sizes="(min-width: 900px) 36vw, 90vw" width="1122" height="1402" alt="A small open sample jar beside a larger open jar of ivory balm, both on stone." loading="lazy" decoding="async">
+          </picture>
+          <figcaption id="scale-cap">The sample beside the full-size jar.</figcaption>
+        </figure>
+
+        <!-- INTERNAL ONLY: proposed Batch 01 prices. Hidden from customers. Not approved. -->
+        <div class="sizes internal-only" id="sizes">
+          <h2 id="sizes-h" class="head">One jar. One size.</h2>
+          <p class="sizes__lead">Twice what you tried. Same balm, from Batch 01.</p>
+          <ul class="sizes__rows" role="list">
+            <li class="sizes__row">
+              <div>
+                <strong>Corrimar balm</strong> · 2 oz <span class="ph">PROPOSED</span>
+                <p class="sizes__soft">Beef tallow, refined four times. A little frankincense oil. <span class="ph">net wt PLACEHOLDER</span></p>
+              </div>
+              <div class="sizes__price">
+                <span class="sizes__num">$32</span> <span class="ph">PROPOSED</span>
+                <p class="sizes__soft">Batch 01 price</p>
+              </div>
+            </li>
+            <li class="sizes__row">
+              <div>
+                <strong>Two jars</strong> · 2 × 2 oz <span class="ph">PROPOSED</span>
+                <p class="sizes__soft">One for you, one to give.</p>
+              </div>
+              <div class="sizes__price">
+                <span class="sizes__num">$58</span> <span class="ph">PROPOSED</span>
+              </div>
+            </li>
+          </ul>
+          <p class="sizes__note">No payment today. We email you before Batch 01 ships. Shipping: <span class="ph">PLACEHOLDER</span>. Cancel and refund wording: <span class="ph">PLACEHOLDER</span>, needs attorney review. Up to 3 jars per person.</p>
+          <a class="btn" href="#reserve">Reserve my jar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FORM (dark section, warm panel) -->
+    <section class="reserve" id="reserve" aria-labelledby="reserve-title">
+      <div class="panel">
+        <h2 id="reserve-title" class="head" tabindex="-1"><span data-when="open">Reserve your full-size jar</span><span data-when="full" hidden>Batch 01 is full</span></h2>
+        <p class="reserve__lede" data-lede><span data-target>100</span> jars in Batch 01 · up to 3 per person</p>
+
+        <!-- MAKER SLOT (internal only until Cesar decides): who makes it, the town, when Batch 01 is made. Real facts only. -->
+        <p class="maker internal-only"><span class="ph">SLOT</span> Who makes this, the town, and when Batch 01 is made. Cesar decides.</p>
+
+        <!-- Live count: hidden unless config SHOW_LIVE_COUNT=true (needs a shared backend first) -->
+        <div class="count" data-live-count hidden>
+          <p class="count__line" aria-live="polite"><span class="count__num" data-reserved data-countup>0</span><span class="count__of">of <span data-target>100</span> reserved</span></p>
+          <span class="count__bar" aria-hidden="true"><span data-bar></span></span>
+          <p class="count__left" data-left-line><span data-left>100</span> jars left.</p>
+        </div>
+
+        <form class="form" id="reserveForm" data-form="reserve" novalidate>
+          <input type="hidden" name="source" value="direct" data-source-input>
+          <div class="field">
+            <label for="r-name">Your name</label>
+            <input id="r-name" name="name" type="text" autocomplete="name" required aria-describedby="r-name-err" maxlength="100">
+            <p class="field__err" id="r-name-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="r-email">Email</label>
+            <input id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="r-email-err" maxlength="120">
+            <p class="field__err" id="r-email-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="r-phone">Phone <span class="opt">(optional)</span></label>
+            <input id="r-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="r-phone-err" maxlength="24">
+            <p class="field__err" id="r-phone-err" hidden></p>
+          </div>
+          <fieldset class="field qty" aria-describedby="r-qty-err">
+            <legend>How many jars</legend>
+            <div class="qty__opts">
+              <label><input type="radio" name="quantity" value="1" checked><span>1</span></label>
+              <label><input type="radio" name="quantity" value="2"><span>2</span></label>
+              <label><input type="radio" name="quantity" value="3"><span>3</span></label>
+            </div>
+            <p class="field__err" id="r-qty-err" hidden></p>
+          </fieldset>
+          <div class="field check">
+            <label class="check__row" for="r-consent"><input id="r-consent" name="consent" type="checkbox" required aria-describedby="r-consent-err"><span>Email me about this reservation. (Required)</span></label>
+            <p class="field__err" id="r-consent-err" hidden></p>
+            <label class="check__row" for="r-text"><input id="r-text" name="textOptIn" type="checkbox" aria-describedby="r-text-err"><span>Text me about it too. (Optional, needs a phone number)</span></label>
+            <p class="field__err" id="r-text-err" hidden></p>
+            <p class="check__ph internal-only"><span class="ph">PLACEHOLDER</span> both consent lines need attorney review.</p>
+          </div>
+          <button class="btn btn--wide" type="submit" data-submit><span data-submit-label>Reserve 1 jar</span></button>
+          <p class="form__note">Free to reserve. No payment today.</p>
+          <p class="form__status" role="alert"></p>
+        </form>
+
+        <form class="form" id="waitForm" data-form="wait" novalidate hidden>
+          <p class="form__lede">Join the waitlist and we will email you when the next batch opens.</p>
+          <div class="field">
+            <label for="w-name">Your name</label>
+            <input id="w-name" name="name" type="text" autocomplete="name" required aria-describedby="w-name-err" maxlength="100">
+            <p class="field__err" id="w-name-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="w-email">Email</label>
+            <input id="w-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="w-email-err" maxlength="120">
+            <p class="field__err" id="w-email-err" hidden></p>
+          </div>
+          <div class="field check">
+            <label class="check__row" for="w-consent"><input id="w-consent" name="consent" type="checkbox" required aria-describedby="w-consent-err"><span>Email me about the next batch. (Required)</span></label>
+            <p class="field__err" id="w-consent-err" hidden></p>
+          </div>
+          <button class="btn btn--wide" type="submit">Join the waitlist</button>
+          <p class="form__status" role="alert"></p>
+        </form>
+
+        <div class="done" data-done hidden tabindex="-1">
+          <svg class="done__jar" viewBox="0 0 120 96" aria-hidden="true">
+            <rect class="jar-body" x="22" y="40" width="76" height="48" rx="6"/>
+            <rect class="jar-balm" x="28" y="40" width="64" height="8" rx="2"/>
+            <rect class="jar-lid" x="16" y="18" width="88" height="22" rx="5"/>
+          </svg>
+          <p class="done__title head" data-done-title>Your jar is held.</p>
+          <p class="done__text" data-done-text>We will email you before Batch 01 ships.</p>
+          <button class="link-btn" type="button" data-again>Reserve for someone else</button>
+        </div>
+        <p class="reserve__draft">Draft: reservations are saved in this browser only.</p>
+      </div>
+    </section>
+
+    <!-- 7. QUESTIONS (ivory) -->
+    <section class="faq" id="questions" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="head" data-reveal>Questions</h2>
+      <div class="faq__list">
+        <details><summary>Do I pay now?</summary><div class="faq__a"><p>No. Reserving is free. Before the batch ships we email you the details and how to pay.</p></div></details>
+        <details><summary>What's in it?</summary><div class="faq__a"><p>Beef tallow, refined four times, with a little frankincense oil. The full ingredient list will be on the jar's label.</p></div></details>
+        <details><summary>When does it ship?</summary><div class="faq__a"><p>We email you with the date before Batch 01 ships. <span class="ph internal-only">PLACEHOLDER ship time</span></p></div></details>
+        <details><summary>Can I change or cancel?</summary><div class="faq__a"><p>Write to <a href="mailto:preorders.tallow@gmail.com">preorders.tallow@gmail.com</a>. <span class="ph internal-only">PLACEHOLDER cancel and refund policy</span></p></div></details>
+        <details><summary>How do I use it?</summary><div class="faq__a"><p>Warm a small amount between your fingertips, then smooth it on. A little goes a long way.</p></div></details>
+        <details><summary>What happens to my details?</summary><div class="faq__a"><p>We use them to contact you about your reservation. See <a href="policies.html#privacy">Privacy</a>. <span class="ph internal-only">PLACEHOLDER privacy policy must match this answer</span></p></div></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="foot__name" aria-hidden="true">Corrimar</p>
+    <div class="foot__row">
+      <a class="foot__mail" href="mailto:preorders.tallow@gmail.com">preorders.tallow@gmail.com</a>
+      <nav class="foot__links" aria-label="Policies">
+        <a href="policies.html#shipping">Shipping</a>
+        <a href="policies.html#cancel">Cancel and refunds</a>
+        <a href="policies.html#privacy">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <aside class="dock" data-dock aria-label="Reserve shortcut" aria-hidden="true">
+    <a class="btn btn--wide" href="#reserve" tabindex="-1">Reserve my full-size jar</a>
+  </aside>
+
+  <script src="config.js"></script>
+  <script src="counter.js"></script>
+  <script src="source.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
